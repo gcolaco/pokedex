@@ -23,18 +23,38 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1rr-3C-CjY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJF-WB-fbm">
+                                        <rect key="frame" x="97" y="21" width="180" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="LvU-ie-o0e"/>
+                                            <constraint firstAttribute="height" constant="36" id="Uzm-FQ-4DW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBoldItalic" family="Avenir Next" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kd6-mM-B0e">
+                                        <rect key="frame" x="341" y="31" width="26" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="26" id="u0i-x1-DUS"/>
+                                            <constraint firstAttribute="height" constant="26" id="zoZ-k7-z6E"/>
+                                        </constraints>
+                                        <state key="normal" image="music.png"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l8b-1b-Dlm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="0VI-mf-BM8"/>
+                                    <constraint firstAttribute="bottom" secondItem="iJF-WB-fbm" secondAttribute="bottom" constant="8" id="L9B-Kd-5kM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kd6-mM-B0e" secondAttribute="bottom" constant="8" id="NJb-1K-08k"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kd6-mM-B0e" secondAttribute="trailing" constant="8" id="bCb-2h-Jwb"/>
+                                    <constraint firstItem="iJF-WB-fbm" firstAttribute="centerX" secondItem="1rr-3C-CjY" secondAttribute="centerX" id="diq-jU-zsc"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="4Ni-wc-bVG">
-                                <rect key="frame" x="0.0" y="65" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="6sU-DW-qWo"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="a1u-cr-2OH">
                                 <rect key="frame" x="0.0" y="109" width="375" height="558"/>
                             </imageView>
@@ -87,6 +107,13 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="4Ni-wc-bVG">
+                                <rect key="frame" x="0.0" y="65" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6sU-DW-qWo"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -118,5 +145,6 @@
     <resources>
         <image name="4" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music.png" width="100" height="100"/>
     </resources>
 </document>
